@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Intern</string>
+
+    <string name="home">Company</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="bookmark">Bookmarks</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="discover">Discover</string>
+    <string name="see_all">See All</string>
+    <string name="your_previous_order">Your Previous Order</string>
+    <string name="add_plus">ADD +</string>
+    <string name="description">Description</string>
+    <string name="manufacturing_details">Manufacturing Details</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

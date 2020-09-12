@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/main_activity_navigation">
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.intern.app.ui.fragments_bottom_nav.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.intern.app.ui.fragments_bottom_nav.BookmarkFragment"
+        android:label="@string/bookmark"
+        tools:layout="@layout/fragment_bookmark"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        >
+
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.intern.app.ui.fragments_bottom_nav.CartFragment"
+        android:label="fragment_forget_my_password"
+        tools:layout="@layout/fragment_cart"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.intern.app.ui.fragments_bottom_nav.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
+
+        <action
+            android:id="@+id/action_homeFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="com.intern.app.ui.fragments.ItemsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_items" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="drawable"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_itemsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.intern.app.ui.fragments.DetailsFragment"
+        tools:layout="@layout/fragment_details"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        />
+
+</navigation>
